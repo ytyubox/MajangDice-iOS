@@ -8,8 +8,8 @@
 
 import UIKit.UIView
 
-enum Dice {
-	case _1, _2, _3, _4, _5, _6
+enum Dice:Int {
+	case _1=1, _2, _3, _4, _5, _6
 	private var name: String {
 		switch self {
 			case ._1: return "dice-six-faces-one"

@@ -7,17 +7,14 @@
 //
 
 import UIKit
+import Combine
 
 final class DiceView: UIView {
 	static var delay:TimeInterval = 0.1
 	
 	static var threshold = 10
 	private var _dice = UIImageView()
-	var timer:Timer! {
-		didSet {
-			oldValue?.invalidate()
-		}
-	}
+	let publish = PassthroughSubject<Bool,Never>()
 	func setup() {
 		
 		_dice.translatesAutoresizingMaskIntoConstraints = false
@@ -31,14 +28,17 @@ final class DiceView: UIView {
 	var count = 0
 	func setDice(for dice:Dice) {
 		count = 0
-		timer =
-			Timer.scheduledTimer(withTimeInterval: Self.delay, repeats: true, block: { (timer) in
-				self.count += 1
-				if self.count == Self.threshold {timer.invalidate()}
-				self._dice.image = Dice.random().image
-				
-			})
-		_dice.image = dice.image
+		Timer.scheduledTimer(withTimeInterval: Self.delay, repeats: true, block: { (timer) in
+			self.count += 1
+			if self.count == Self.threshold {
+				self._dice.image = dice.image
+				self.publish.send(true)
+				timer.invalidate()
+				return
+			}
+			self._dice.image = Dice.random().image
+			self.publish.send(false)
+		})
 	}
 }
 

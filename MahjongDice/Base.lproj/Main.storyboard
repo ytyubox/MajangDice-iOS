@@ -38,6 +38,13 @@
                                     <action selector="didTapReroll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jdo-EJ-ggW"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sample" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhU-qF-q8V">
+                                <rect key="frame" x="183" y="79" width="58" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -46,6 +53,7 @@
                         <outlet property="_1_diceView" destination="MUh-kj-5Ub" id="8HL-vR-0Ob"/>
                         <outlet property="_2_diceView" destination="Vm6-MU-nf7" id="gpx-8V-zOd"/>
                         <outlet property="_3_diceView" destination="lw1-r5-KVU" id="1se-I8-0N3"/>
+                        <outlet property="hintLabel" destination="qhU-qF-q8V" id="cYz-it-2lp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
