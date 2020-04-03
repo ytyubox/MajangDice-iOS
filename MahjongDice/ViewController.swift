@@ -32,7 +32,7 @@ class ViewController: UIViewController {
 			_3_diceView.publish
 		).sink { (a,b,c) in
 			guard a,b,c else {return}
-			self.hintLabel.text = self.diceResult.description
+			self.setLabel()
 		}.store(in: &bag)
 		print(#function)
 	}
@@ -55,5 +55,8 @@ extension ViewController {
 		diceResult = rt.map(\.rawValue).reduce(0, +)
 		return rt
 	}
-	
+	private func setLabel() {
+		let post = diceResult & 4
+		self.hintLabel.text = self.diceResult.description
+	}
 }

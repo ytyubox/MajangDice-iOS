@@ -13,13 +13,14 @@
 		A736294E243746E700603ABB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A736294C243746E700603ABB /* Main.storyboard */; };
 		A7362950243746E800603ABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A736294F243746E800603ABB /* Assets.xcassets */; };
 		A7362953243746E800603ABB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7362951243746E800603ABB /* LaunchScreen.storyboard */; };
-		A736295E243746E800603ABB /* MahjongDiceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A736295D243746E800603ABB /* MahjongDiceUITests.swift */; };
 		A7C6175624374D6100319DB4 /* DiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C6175524374D6100319DB4 /* DiceView.swift */; };
 		A7C61758243754E300319DB4 /* DiceHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C61757243754E300319DB4 /* DiceHeader.swift */; };
+		A7C6175A24375EDD00319DB4 /* DiceCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C6175924375EDD00319DB4 /* DiceCalculator.swift */; };
+		A7C61762243761D100319DB4 /* MahjongDiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C61761243761D100319DB4 /* MahjongDiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A736295A243746E800603ABB /* PBXContainerItemProxy */ = {
+		A7C61764243761D100319DB4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A736293B243746E700603ABB /* Project object */;
 			proxyType = 1;
@@ -37,11 +38,12 @@
 		A736294F243746E800603ABB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7362952243746E800603ABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7362954243746E800603ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A7362959243746E800603ABB /* MahjongDiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MahjongDiceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A736295D243746E800603ABB /* MahjongDiceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MahjongDiceUITests.swift; sourceTree = "<group>"; };
-		A736295F243746E800603ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7C6175524374D6100319DB4 /* DiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceView.swift; sourceTree = "<group>"; };
 		A7C61757243754E300319DB4 /* DiceHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceHeader.swift; sourceTree = "<group>"; };
+		A7C6175924375EDD00319DB4 /* DiceCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceCalculator.swift; sourceTree = "<group>"; };
+		A7C6175F243761D100319DB4 /* MahjongDiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MahjongDiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7C61761243761D100319DB4 /* MahjongDiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MahjongDiceTests.swift; sourceTree = "<group>"; };
+		A7C61763243761D100319DB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A7362956243746E800603ABB /* Frameworks */ = {
+		A7C6175C243761D100319DB4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -66,7 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				A7362945243746E700603ABB /* MahjongDice */,
-				A736295C243746E800603ABB /* MahjongDiceUITests */,
+				A7C61760243761D100319DB4 /* MahjongDiceTests */,
 				A7362944243746E700603ABB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,7 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				A7362943243746E700603ABB /* MahjongDice.app */,
-				A7362959243746E800603ABB /* MahjongDiceUITests.xctest */,
+				A7C6175F243761D100319DB4 /* MahjongDiceTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,6 +88,7 @@
 				A7362946243746E700603ABB /* AppDelegate.swift */,
 				A7362948243746E700603ABB /* SceneDelegate.swift */,
 				A736294A243746E700603ABB /* ViewController.swift */,
+				A7C6175924375EDD00319DB4 /* DiceCalculator.swift */,
 				A736294C243746E700603ABB /* Main.storyboard */,
 				A7C61736243748E600319DB4 /* resource */,
 				A7C6175424374D4900319DB4 /* CustomView */,
@@ -94,15 +97,6 @@
 				A7362954243746E800603ABB /* Info.plist */,
 			);
 			path = MahjongDice;
-			sourceTree = "<group>";
-		};
-		A736295C243746E800603ABB /* MahjongDiceUITests */ = {
-			isa = PBXGroup;
-			children = (
-				A736295D243746E800603ABB /* MahjongDiceUITests.swift */,
-				A736295F243746E800603ABB /* Info.plist */,
-			);
-			path = MahjongDiceUITests;
 			sourceTree = "<group>";
 		};
 		A7C61736243748E600319DB4 /* resource */ = {
@@ -119,6 +113,15 @@
 				A7C6175524374D6100319DB4 /* DiceView.swift */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		A7C61760243761D100319DB4 /* MahjongDiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				A7C61761243761D100319DB4 /* MahjongDiceTests.swift */,
+				A7C61763243761D100319DB4 /* Info.plist */,
+			);
+			path = MahjongDiceTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,23 +146,23 @@
 			productReference = A7362943243746E700603ABB /* MahjongDice.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A7362958243746E800603ABB /* MahjongDiceUITests */ = {
+		A7C6175E243761D100319DB4 /* MahjongDiceTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A7362965243746E800603ABB /* Build configuration list for PBXNativeTarget "MahjongDiceUITests" */;
+			buildConfigurationList = A7C61766243761D100319DB4 /* Build configuration list for PBXNativeTarget "MahjongDiceTests" */;
 			buildPhases = (
-				A7362955243746E800603ABB /* Sources */,
-				A7362956243746E800603ABB /* Frameworks */,
-				A7362957243746E800603ABB /* Resources */,
+				A7C6175B243761D100319DB4 /* Sources */,
+				A7C6175C243761D100319DB4 /* Frameworks */,
+				A7C6175D243761D100319DB4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A736295B243746E800603ABB /* PBXTargetDependency */,
+				A7C61765243761D100319DB4 /* PBXTargetDependency */,
 			);
-			name = MahjongDiceUITests;
-			productName = MahjongDiceUITests;
-			productReference = A7362959243746E800603ABB /* MahjongDiceUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
+			name = MahjongDiceTests;
+			productName = MahjongDiceTests;
+			productReference = A7C6175F243761D100319DB4 /* MahjongDiceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -174,7 +177,7 @@
 					A7362942243746E700603ABB = {
 						CreatedOnToolsVersion = 11.4;
 					};
-					A7362958243746E800603ABB = {
+					A7C6175E243761D100319DB4 = {
 						CreatedOnToolsVersion = 11.4;
 						TestTargetID = A7362942243746E700603ABB;
 					};
@@ -196,7 +199,7 @@
 			projectRoot = "";
 			targets = (
 				A7362942243746E700603ABB /* MahjongDice */,
-				A7362958243746E800603ABB /* MahjongDiceUITests */,
+				A7C6175E243761D100319DB4 /* MahjongDiceTests */,
 			);
 		};
 /* End PBXProject section */
@@ -212,7 +215,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A7362957243746E800603ABB /* Resources */ = {
+		A7C6175D243761D100319DB4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -230,25 +233,26 @@
 				A7C6175624374D6100319DB4 /* DiceView.swift in Sources */,
 				A736294B243746E700603ABB /* ViewController.swift in Sources */,
 				A7362947243746E700603ABB /* AppDelegate.swift in Sources */,
+				A7C6175A24375EDD00319DB4 /* DiceCalculator.swift in Sources */,
 				A7362949243746E700603ABB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A7362955243746E800603ABB /* Sources */ = {
+		A7C6175B243761D100319DB4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A736295E243746E800603ABB /* MahjongDiceUITests.swift in Sources */,
+				A7C61762243761D100319DB4 /* MahjongDiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A736295B243746E800603ABB /* PBXTargetDependency */ = {
+		A7C61765243761D100319DB4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A7362942243746E700603ABB /* MahjongDice */;
-			targetProxy = A736295A243746E800603ABB /* PBXContainerItemProxy */;
+			targetProxy = A7C61764243761D100319DB4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -422,43 +426,43 @@
 			};
 			name = Release;
 		};
-		A7362966243746E800603ABB /* Debug */ = {
+		A7C61767243761D100319DB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AMPL46LPV;
-				INFOPLIST_FILE = MahjongDiceUITests/Info.plist;
+				INFOPLIST_FILE = MahjongDiceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ytyubox.MahjongDiceUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ytyubox.MahjongDiceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MahjongDice;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MahjongDice.app/MahjongDice";
 			};
 			name = Debug;
 		};
-		A7362967243746E800603ABB /* Release */ = {
+		A7C61768243761D100319DB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AMPL46LPV;
-				INFOPLIST_FILE = MahjongDiceUITests/Info.plist;
+				INFOPLIST_FILE = MahjongDiceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ytyubox.MahjongDiceUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ytyubox.MahjongDiceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MahjongDice;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MahjongDice.app/MahjongDice";
 			};
 			name = Release;
 		};
@@ -483,11 +487,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A7362965243746E800603ABB /* Build configuration list for PBXNativeTarget "MahjongDiceUITests" */ = {
+		A7C61766243761D100319DB4 /* Build configuration list for PBXNativeTarget "MahjongDiceTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A7362966243746E800603ABB /* Debug */,
-				A7362967243746E800603ABB /* Release */,
+				A7C61767243761D100319DB4 /* Debug */,
+				A7C61768243761D100319DB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

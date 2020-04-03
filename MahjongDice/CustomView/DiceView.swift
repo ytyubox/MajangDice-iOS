@@ -15,6 +15,9 @@ final class DiceView: UIView {
 	static var threshold = 10
 	private var _dice = UIImageView()
 	let publish = PassthroughSubject<Bool,Never>()
+	var timer:Timer! {
+		didSet {oldValue?.invalidate()}
+	}
 	func setup() {
 		
 		_dice.translatesAutoresizingMaskIntoConstraints = false
@@ -28,7 +31,7 @@ final class DiceView: UIView {
 	var count = 0
 	func setDice(for dice:Dice) {
 		count = 0
-		Timer.scheduledTimer(withTimeInterval: Self.delay, repeats: true, block: { (timer) in
+		timer = Timer.scheduledTimer(withTimeInterval: Self.delay, repeats: true, block: { (timer) in
 			self.count += 1
 			if self.count == Self.threshold {
 				self._dice.image = dice.image
