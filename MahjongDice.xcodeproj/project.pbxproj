@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,15 +14,7 @@
 		A7362950243746E800603ABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A736294F243746E800603ABB /* Assets.xcassets */; };
 		A7362953243746E800603ABB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7362951243746E800603ABB /* LaunchScreen.storyboard */; };
 		A736295E243746E800603ABB /* MahjongDiceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A736295D243746E800603ABB /* MahjongDiceUITests.swift */; };
-		A7C61734243748CE00319DB4 /* SwiftSVG in Frameworks */ = {isa = PBXBuildFile; productRef = A7C61733243748CE00319DB4 /* SwiftSVG */; };
-		A7C617442437490200319DB4 /* SVGHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C617432437490200319DB4 /* SVGHeader.swift */; };
-		A7C6174B24374A1400319DB4 /* dice-six-faces-four.svg in Resources */ = {isa = PBXBuildFile; fileRef = A7C6174524374A1300319DB4 /* dice-six-faces-four.svg */; };
-		A7C6174C24374A1400319DB4 /* dice-six-faces-five.svg in Resources */ = {isa = PBXBuildFile; fileRef = A7C6174624374A1400319DB4 /* dice-six-faces-five.svg */; };
-		A7C6174D24374A1400319DB4 /* dice-six-faces-six.svg in Resources */ = {isa = PBXBuildFile; fileRef = A7C6174724374A1400319DB4 /* dice-six-faces-six.svg */; };
-		A7C6174E24374A1400319DB4 /* dice-six-faces-two.svg in Resources */ = {isa = PBXBuildFile; fileRef = A7C6174824374A1400319DB4 /* dice-six-faces-two.svg */; };
-		A7C6174F24374A1400319DB4 /* dice-six-faces-three.svg in Resources */ = {isa = PBXBuildFile; fileRef = A7C6174924374A1400319DB4 /* dice-six-faces-three.svg */; };
-		A7C6175024374A1400319DB4 /* dice-six-faces-one.svg in Resources */ = {isa = PBXBuildFile; fileRef = A7C6174A24374A1400319DB4 /* dice-six-faces-one.svg */; };
-		A7C6175324374A3A00319DB4 /* DiceHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C6175224374A3A00319DB4 /* DiceHeader.swift */; };
+		A7C6175624374D6100319DB4 /* DiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C6175524374D6100319DB4 /* DiceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,14 +39,7 @@
 		A7362959243746E800603ABB /* MahjongDiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MahjongDiceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A736295D243746E800603ABB /* MahjongDiceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MahjongDiceUITests.swift; sourceTree = "<group>"; };
 		A736295F243746E800603ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A7C617432437490200319DB4 /* SVGHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGHeader.swift; sourceTree = "<group>"; };
-		A7C6174524374A1300319DB4 /* dice-six-faces-four.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "dice-six-faces-four.svg"; sourceTree = "<group>"; };
-		A7C6174624374A1400319DB4 /* dice-six-faces-five.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "dice-six-faces-five.svg"; sourceTree = "<group>"; };
-		A7C6174724374A1400319DB4 /* dice-six-faces-six.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "dice-six-faces-six.svg"; sourceTree = "<group>"; };
-		A7C6174824374A1400319DB4 /* dice-six-faces-two.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "dice-six-faces-two.svg"; sourceTree = "<group>"; };
-		A7C6174924374A1400319DB4 /* dice-six-faces-three.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "dice-six-faces-three.svg"; sourceTree = "<group>"; };
-		A7C6174A24374A1400319DB4 /* dice-six-faces-one.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "dice-six-faces-one.svg"; sourceTree = "<group>"; };
-		A7C6175224374A3A00319DB4 /* DiceHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceHeader.swift; sourceTree = "<group>"; };
+		A7C6175524374D6100319DB4 /* DiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +47,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7C61734243748CE00319DB4 /* SwiftSVG in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,11 +81,12 @@
 		A7362945243746E700603ABB /* MahjongDice */ = {
 			isa = PBXGroup;
 			children = (
-				A7C61736243748E600319DB4 /* resource */,
 				A7362946243746E700603ABB /* AppDelegate.swift */,
 				A7362948243746E700603ABB /* SceneDelegate.swift */,
 				A736294A243746E700603ABB /* ViewController.swift */,
 				A736294C243746E700603ABB /* Main.storyboard */,
+				A7C61736243748E600319DB4 /* resource */,
+				A7C6175424374D4900319DB4 /* CustomView */,
 				A736294F243746E800603ABB /* Assets.xcassets */,
 				A7362951243746E800603ABB /* LaunchScreen.storyboard */,
 				A7362954243746E800603ABB /* Info.plist */,
@@ -118,35 +103,19 @@
 			path = MahjongDiceUITests;
 			sourceTree = "<group>";
 		};
-		A7C61735243748DB00319DB4 /* SVG */ = {
-			isa = PBXGroup;
-			children = (
-				A7C617432437490200319DB4 /* SVGHeader.swift */,
-				A7C6175124374A2300319DB4 /* Dice */,
-			);
-			path = SVG;
-			sourceTree = "<group>";
-		};
 		A7C61736243748E600319DB4 /* resource */ = {
 			isa = PBXGroup;
 			children = (
-				A7C61735243748DB00319DB4 /* SVG */,
 			);
 			path = resource;
 			sourceTree = "<group>";
 		};
-		A7C6175124374A2300319DB4 /* Dice */ = {
+		A7C6175424374D4900319DB4 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
-				A7C6174624374A1400319DB4 /* dice-six-faces-five.svg */,
-				A7C6174524374A1300319DB4 /* dice-six-faces-four.svg */,
-				A7C6174A24374A1400319DB4 /* dice-six-faces-one.svg */,
-				A7C6174724374A1400319DB4 /* dice-six-faces-six.svg */,
-				A7C6174924374A1400319DB4 /* dice-six-faces-three.svg */,
-				A7C6174824374A1400319DB4 /* dice-six-faces-two.svg */,
-				A7C6175224374A3A00319DB4 /* DiceHeader.swift */,
+				A7C6175524374D6100319DB4 /* DiceView.swift */,
 			);
-			path = Dice;
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,7 +135,6 @@
 			);
 			name = MahjongDice;
 			packageProductDependencies = (
-				A7C61733243748CE00319DB4 /* SwiftSVG */,
 			);
 			productName = MahjongDice;
 			productReference = A7362943243746E700603ABB /* MahjongDice.app */;
@@ -219,7 +187,6 @@
 			);
 			mainGroup = A736293A243746E700603ABB;
 			packageReferences = (
-				A7C61732243748CE00319DB4 /* XCRemoteSwiftPackageReference "SwiftSVG" */,
 			);
 			productRefGroup = A7362944243746E700603ABB /* Products */;
 			projectDirPath = "";
@@ -236,15 +203,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7C6174F24374A1400319DB4 /* dice-six-faces-three.svg in Resources */,
 				A7362953243746E800603ABB /* LaunchScreen.storyboard in Resources */,
 				A7362950243746E800603ABB /* Assets.xcassets in Resources */,
-				A7C6174D24374A1400319DB4 /* dice-six-faces-six.svg in Resources */,
 				A736294E243746E700603ABB /* Main.storyboard in Resources */,
-				A7C6175024374A1400319DB4 /* dice-six-faces-one.svg in Resources */,
-				A7C6174E24374A1400319DB4 /* dice-six-faces-two.svg in Resources */,
-				A7C6174C24374A1400319DB4 /* dice-six-faces-five.svg in Resources */,
-				A7C6174B24374A1400319DB4 /* dice-six-faces-four.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,11 +223,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7C6175324374A3A00319DB4 /* DiceHeader.swift in Sources */,
+				A7C6175624374D6100319DB4 /* DiceView.swift in Sources */,
 				A736294B243746E700603ABB /* ViewController.swift in Sources */,
 				A7362947243746E700603ABB /* AppDelegate.swift in Sources */,
 				A7362949243746E700603ABB /* SceneDelegate.swift in Sources */,
-				A7C617442437490200319DB4 /* SVGHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,25 +489,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		A7C61732243748CE00319DB4 /* XCRemoteSwiftPackageReference "SwiftSVG" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mchoe/SwiftSVG";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.3.2;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		A7C61733243748CE00319DB4 /* SwiftSVG */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A7C61732243748CE00319DB4 /* XCRemoteSwiftPackageReference "SwiftSVG" */;
-			productName = SwiftSVG;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A736293B243746E700603ABB /* Project object */;
 }
