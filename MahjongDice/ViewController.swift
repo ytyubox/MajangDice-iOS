@@ -26,12 +26,9 @@ class ViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		let svgURL = URL(string: "https://openclipart.org/download/181651/manhammock.svg")!
-		let hammock = UIView(SVGURL: svgURL) { (svgLayer) in
-				svgLayer.fillColor = UIColor(red:0.52, green:0.16, blue:0.32, alpha:1.00).cgColor
-			svgLayer.resizeToFit(self._1_diceView.bounds)
+		allDiceView.forEach{
+			$0.setup()
 		}
-		_1_diceView.addSubview(hammock)
 		print(#function)
 	}
 	
