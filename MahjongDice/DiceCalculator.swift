@@ -11,7 +11,7 @@ import Foundation
 public struct DiceCalculator {
 	public init() { }
 	var rowTotal = 18
-	public mutating func calculate(_ nb:Int) -> DiceResult {
+	public func calculate(_ nb:Int) -> DiceResult {
 		if nb == 18 {
 			return DiceResult(1, 1, 17)
 		}

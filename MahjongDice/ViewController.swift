@@ -10,10 +10,13 @@ import UIKit
 import Combine
 
 class ViewController: UIViewController {
-	@IBOutlet weak var hintLabel: UILabel!
+	@IBOutlet private weak var hintLabel: UILabel!
+	@IBOutlet private weak var leftNumberLabel: UILabel!
+	@IBOutlet private weak var rightNumberLabel: UILabel!
 	@IBOutlet private weak var _1_diceView: DiceView!
 	@IBOutlet private weak var _2_diceView: DiceView!
 	@IBOutlet private weak var _3_diceView: DiceView!
+	private let calculator = DiceCalculator()
 	private var allDiceView:[DiceView] {
 		[_1_diceView,
 		 _2_diceView,
@@ -42,6 +45,7 @@ class ViewController: UIViewController {
 	}
 	
 	private func genRamdomDice() {
+		hintLabel.text = "dicing"
 		zip(getDiceSet,allDiceView).forEach {
 			$1.setDice(for: $0)
 		}
@@ -56,7 +60,20 @@ extension ViewController {
 		return rt
 	}
 	private func setLabel() {
-		let post = diceResult & 4
-		self.hintLabel.text = self.diceResult.description
+		let r = calculator.calculate(diceResult)
+		rightNumberLabel.text = r.fromRight.formatted
+		rightNumberLabel.sizeToFit()
+		leftNumberLabel.text = r.fromLeft.formatted
+		leftNumberLabel.sizeToFit()
+		hintLabel.text = diceResult.description
+		
+	}
+
+}
+
+extension Int {
+	var formatted:String {
+		if self < 10 {return " " + description}
+		return description
 	}
 }

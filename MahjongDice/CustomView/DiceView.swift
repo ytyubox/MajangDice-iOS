@@ -30,6 +30,7 @@ final class DiceView: UIView {
 	}
 	var count = 0
 	func setDice(for dice:Dice) {
+		shake()
 		count = 0
 		timer = Timer.scheduledTimer(withTimeInterval: Self.delay, repeats: true, block: { (timer) in
 			self.count += 1
@@ -45,3 +46,14 @@ final class DiceView: UIView {
 	}
 }
 
+extension UIView {
+    func shake() {
+			let x = (40...100).randomElement()!
+			let y = (40...100).randomElement()!
+			print(x,y)
+			self.transform = CGAffineTransform(translationX: CGFloat(x), y: CGFloat(y))
+			UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {
+            self.transform = CGAffineTransform.identity
+        }, completion: nil)
+    }
+}
