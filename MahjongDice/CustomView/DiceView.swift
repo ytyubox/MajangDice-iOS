@@ -9,8 +9,15 @@
 import UIKit
 
 final class DiceView: UIView {
-	private var _dice = UIImageView()
+	static var delay:TimeInterval = 0.1
 	
+	static var threshold = 10
+	private var _dice = UIImageView()
+	var timer:Timer! {
+		didSet {
+			oldValue?.invalidate()
+		}
+	}
 	func setup() {
 		
 		_dice.translatesAutoresizingMaskIntoConstraints = false
@@ -21,8 +28,16 @@ final class DiceView: UIView {
 		_dice.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
 		_dice.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
 	}
-	
+	var count = 0
 	func setDice(for dice:Dice) {
+		count = 0
+		timer =
+			Timer.scheduledTimer(withTimeInterval: Self.delay, repeats: true, block: { (timer) in
+				self.count += 1
+				if self.count == Self.threshold {timer.invalidate()}
+				self._dice.image = Dice.random().image
+				
+			})
 		_dice.image = dice.image
 	}
 }
