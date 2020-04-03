@@ -9,12 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+	@IBOutlet private weak var _1_diceView: UIView!
+	@IBOutlet private weak var _2_diceView: UIView!
+	@IBOutlet private weak var _3_diceView: UIView!
+	private let diceSource:Set<Dice> = Set(Dice.allCases)
+	private var allDiceView:[UIView] {
+		[_1_diceView,
+		 _2_diceView,
+		 _3_diceView,]
+	}
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
+		
 	}
-
-
+	
+	
 }
 
