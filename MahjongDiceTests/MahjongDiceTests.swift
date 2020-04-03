@@ -14,24 +14,35 @@ class MahjongDiceTests: XCTestCase {
 	typealias R = DiceCalculator.DiceResult
 	
 	func testDiceCalculator() {
-		var cal = DiceCalculator()
+		let cal = DiceCalculator()
 		do {
 			let t = 3
-			let expect = R(3,3,15)
+			let expect = R(._3,3,15)
 			let result = cal.calculate(t)
 			XCTAssertEqual(result, expect)
 		}
 		do {
 			let t = 5
-			let expect = R(1,5,13)
+			let expect = R(._1,5,13)
 			let result = cal.calculate(t)
 			XCTAssertEqual(result, expect)
 		}
 		do {
 			let t = 18
-			let expect = R(1,1,17)
+			let expect = R(._1,1,17)
 			let result = cal.calculate(t)
 			XCTAssertEqual(result, expect)
 		}
+	}
+	func testPostion() {
+
+		XCTAssertEqual(Postion(v: 3), Postion._3)
+		XCTAssertEqual(Postion(v: 4), Postion._4)
+		XCTAssertEqual(Postion(v: 5), Postion._1)
+		XCTAssertEqual(Postion(v: 6), Postion._2)
+		XCTAssertEqual(Postion(v: 7), Postion._3)
+		XCTAssertEqual(Postion(v: 18), Postion._1)
+		
+//		}
 	}
 }

@@ -10,12 +10,15 @@ import UIKit
 import Combine
 
 class ViewController: UIViewController {
+	@IBOutlet private weak var hintGroupStackView: UIStackView!
+	@IBOutlet private weak var grapGroupStackView: UIStackView!
 	@IBOutlet private weak var hintLabel: UILabel!
 	@IBOutlet private weak var leftNumberLabel: UILabel!
 	@IBOutlet private weak var rightNumberLabel: UILabel!
 	@IBOutlet private weak var _1_diceView: DiceView!
 	@IBOutlet private weak var _2_diceView: DiceView!
 	@IBOutlet private weak var _3_diceView: DiceView!
+	private var rotateAngle:CGFloat = 0
 	private let calculator = DiceCalculator()
 	private var allDiceView:[DiceView] {
 		[_1_diceView,
@@ -24,11 +27,13 @@ class ViewController: UIViewController {
 	}
 	private var diceResult = 0
 	private var bag = Set<AnyCancellable>()
+	private var r: DiceCalculator.DiceResult!
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		allDiceView.forEach{
 			$0.setup()
 		}
+		self.hintGroupStackView.transform = CGAffineTransform(rotationAngle: .pi)
 		Publishers.Zip3(
 			_1_diceView.publish,
 			_2_diceView.publish,
@@ -42,11 +47,14 @@ class ViewController: UIViewController {
 	
 	@IBAction private func didTapReroll(_ sender: UIButton) {
 		genRamdomDice()
+		rotatingStackView()
 	}
 	
 	private func genRamdomDice() {
+		let diceSet = getDiceSet
+		r = calculator.calculate(diceResult)
 		hintLabel.text = "dicing"
-		zip(getDiceSet,allDiceView).forEach {
+		zip(diceSet,allDiceView).forEach {
 			$1.setDice(for: $0)
 		}
 	}
@@ -55,12 +63,10 @@ class ViewController: UIViewController {
 extension ViewController {
 	private var getDiceSet: [Dice] {
 		let rt = [Dice.random(),.random(),.random()]
-		print(rt)
 		diceResult = rt.map(\.rawValue).reduce(0, +)
 		return rt
 	}
 	private func setLabel() {
-		let r = calculator.calculate(diceResult)
 		rightNumberLabel.text = r.fromRight.formatted
 		rightNumberLabel.sizeToFit()
 		leftNumberLabel.text = r.fromLeft.formatted
@@ -68,7 +74,18 @@ extension ViewController {
 		hintLabel.text = diceResult.description
 		
 	}
-
+	private func rotatingStackView() {
+		self.grapGroupStackView.transform = .identity
+		let post = r.start
+		print(post.rawValue)
+		print(self.rotateAngle)
+		rotateAngle = (.pi / 2) * CGFloat(post.rawValue)
+		print(self.rotateAngle)
+		UIView.animate(withDuration: 2.0, delay: 0
+			, options: .curveEaseInOut,  animations: {
+				self.grapGroupStackView.transform = CGAffineTransform(rotationAngle: self.rotateAngle)
+		})
+	}
 }
 
 extension Int {

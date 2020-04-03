@@ -8,21 +8,20 @@
 
 import Foundation
 
-public struct DiceCalculator {
-	public init() { }
+struct DiceCalculator {
+	init() { }
 	var rowTotal = 18
-	public func calculate(_ nb:Int) -> DiceResult {
+	func calculate(_ nb:Int) -> DiceResult {
 		if nb == 18 {
-			return DiceResult(1, 1, 17)
+			return DiceResult(._1, 1, 17)
 		}
-		let start = nb % 4
 		let fromLeft = nb
 		let fromRight = 18 - fromLeft
-		return DiceResult(start,fromLeft, fromRight)
+		return DiceResult(Postion(v:nb),fromLeft, fromRight)
 	}
-	public struct DiceResult:Equatable {
-		public init(
-			_ start:Int,
+	struct DiceResult:Equatable {
+		init(
+			_ start:Postion,
 			_ fromRight:Int,
 			_ fromLeft:Int
 		) {
@@ -31,9 +30,9 @@ public struct DiceCalculator {
 			self.fromLeft = fromLeft
 			
 		}
-		public var start:Int
-		public var fromRight:Int
-		public var fromLeft:Int
+		var start:Postion
+		var fromRight:Int
+		var fromLeft:Int
 	}
 }
 

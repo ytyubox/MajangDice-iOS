@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,11 +12,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MahjongDice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="lS0-Tc-0nH">
-                                <rect key="frame" x="74" y="323" width="266" height="250"/>
+                                <rect key="frame" x="54.666666666666657" y="260.66666666666663" width="266" height="290.66666666666663"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MUh-kj-5Ub" customClass="DiceView" customModule="MahjongDice" customModuleProvider="target">
                                         <rect key="frame" x="83" y="0.0" width="100" height="100"/>
@@ -27,10 +27,10 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="66" translatesAutoresizingMaskIntoConstraints="NO" id="uIG-06-WKe">
-                                        <rect key="frame" x="0.0" y="150" width="266" height="100"/>
+                                        <rect key="frame" x="0.0" y="150" width="266" height="140.66666666666663"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vm6-MU-nf7" customClass="DiceView" customModule="MahjongDice" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <rect key="frame" x="0.0" y="20.333333333333314" width="100" height="100"/>
                                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="LbU-Qc-rSm"/>
@@ -38,7 +38,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lw1-r5-KVU" customClass="DiceView" customModule="MahjongDice" customModuleProvider="target">
-                                                <rect key="frame" x="166" y="0.0" width="100" height="100"/>
+                                                <rect key="frame" x="166" y="20.333333333333314" width="100" height="100"/>
                                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="ShJ-Uc-Y1K"/>
@@ -50,25 +50,25 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dw-rj-p5V">
-                                <rect key="frame" x="189.5" y="433" width="35" height="30"/>
+                                <rect key="frame" x="170" y="391" width="35" height="30"/>
                                 <state key="normal" title="reroll"/>
                                 <connections>
                                     <action selector="didTapReroll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jdo-EJ-ggW"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4Dj-sO-0xx">
-                                <rect key="frame" x="134" y="73" width="147" height="203"/>
+                                <rect key="frame" x="134" y="72.999999999999986" width="108" height="140.66666666666663"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdJ-0a-KnW">
-                                        <rect key="frame" x="0.0" y="0.0" width="147" height="174.5"/>
+                                        <rect key="frame" x="6.6666666666666572" y="0.0" width="94.666666666666671" height="112.33333333333333"/>
                                         <string key="text">▲
 莊家</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="73"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="47"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sample" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhU-qF-q8V">
-                                        <rect key="frame" x="45" y="182.5" width="57.5" height="20.5"/>
+                                        <rect key="frame" x="25.333333333333346" y="120.33333333333333" width="57.333333333333343" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -76,10 +76,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MdB-T8-MFx">
-                                <rect key="frame" x="107" y="626.5" width="200" height="174"/>
+                                <rect key="frame" x="87.666666666666686" y="542.66666666666663" width="200" height="174"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="抓" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vb-yq-bxB">
-                                        <rect key="frame" x="74.5" y="0.0" width="51.5" height="61"/>
+                                        <rect key="frame" x="74.333333333333329" y="0.0" width="51.333333333333329" height="61"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="51"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -94,13 +94,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="左" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUG-1Y-cOA">
-                                                <rect key="frame" x="52" y="8" width="44" height="20.5"/>
+                                                <rect key="frame" x="51.999999999999986" y="7.6666666666667407" width="44" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="右  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4A-YH-FVm">
-                                                <rect key="frame" x="104" y="8" width="44" height="20.5"/>
+                                                <rect key="frame" x="103.99999999999999" y="7.6666666666667407" width="44.000000000000014" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -117,7 +117,7 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="▼" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0v-Ku-LPL">
-                                        <rect key="frame" x="80.5" y="113" width="39.5" height="61"/>
+                                        <rect key="frame" x="79.999999999999986" y="113" width="39.666666666666671" height="61"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="51"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -147,6 +147,8 @@
                         <outlet property="_1_diceView" destination="MUh-kj-5Ub" id="8HL-vR-0Ob"/>
                         <outlet property="_2_diceView" destination="Vm6-MU-nf7" id="gpx-8V-zOd"/>
                         <outlet property="_3_diceView" destination="lw1-r5-KVU" id="1se-I8-0N3"/>
+                        <outlet property="grapGroupStackView" destination="MdB-T8-MFx" id="3I0-Pm-TXq"/>
+                        <outlet property="hintGroupStackView" destination="4Dj-sO-0xx" id="Cwb-E2-K6d"/>
                         <outlet property="hintLabel" destination="qhU-qF-q8V" id="cYz-it-2lp"/>
                         <outlet property="leftNumberLabel" destination="Dpm-1m-RMn" id="mgm-Xb-YWT"/>
                         <outlet property="rightNumberLabel" destination="4ON-KE-TW9" id="RWO-aB-uWu"/>

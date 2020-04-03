@@ -50,7 +50,6 @@ extension UIView {
     func shake() {
 			let x = (40...100).randomElement()!
 			let y = (40...100).randomElement()!
-			print(x,y)
 			self.transform = CGAffineTransform(translationX: CGFloat(x), y: CGFloat(y))
 			UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {
             self.transform = CGAffineTransform.identity
