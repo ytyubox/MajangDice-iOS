@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="lS0-Tc-0nH">
-                                <rect key="frame" x="54.666666666666657" y="260.66666666666663" width="266" height="290.66666666666663"/>
+                                <rect key="frame" x="54.666666666666657" y="269" width="266" height="274"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MUh-kj-5Ub" customClass="DiceView" customModule="MahjongDice" customModuleProvider="target">
                                         <rect key="frame" x="83" y="0.0" width="100" height="100"/>
@@ -27,10 +27,10 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="66" translatesAutoresizingMaskIntoConstraints="NO" id="uIG-06-WKe">
-                                        <rect key="frame" x="0.0" y="150" width="266" height="140.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="150" width="266" height="124"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vm6-MU-nf7" customClass="DiceView" customModule="MahjongDice" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="20.333333333333314" width="100" height="100"/>
+                                                <rect key="frame" x="0.0" y="12" width="100" height="100"/>
                                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="LbU-Qc-rSm"/>
@@ -38,7 +38,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lw1-r5-KVU" customClass="DiceView" customModule="MahjongDice" customModuleProvider="target">
-                                                <rect key="frame" x="166" y="20.333333333333314" width="100" height="100"/>
+                                                <rect key="frame" x="166" y="12" width="100" height="100"/>
                                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="ShJ-Uc-Y1K"/>
@@ -57,18 +57,22 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4Dj-sO-0xx">
-                                <rect key="frame" x="134" y="72.999999999999986" width="108" height="140.66666666666663"/>
+                                <rect key="frame" x="112" y="73" width="151" height="149"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdJ-0a-KnW">
-                                        <rect key="frame" x="6.6666666666666572" y="0.0" width="94.666666666666671" height="112.33333333333333"/>
-                                        <string key="text">▲
-莊家</string>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="▼" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdJ-0a-KnW">
+                                        <rect key="frame" x="57.333333333333343" y="0.0" width="36.666666666666657" height="56.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="47"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sample" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhU-qF-q8V">
-                                        <rect key="frame" x="25.333333333333346" y="120.33333333333333" width="57.333333333333343" height="20.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="64.333333333333343" width="151" height="56.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="莊家" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAX-e3-bC1">
+                                        <rect key="frame" x="58.333333333333343" y="128.66666666666666" width="34.666666666666657" height="20.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -130,9 +134,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="4Dj-sO-0xx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4WW-zc-uca"/>
                             <constraint firstItem="lS0-Tc-0nH" firstAttribute="top" secondItem="4Dj-sO-0xx" secondAttribute="bottom" constant="47" id="6nw-RR-R9r"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Dj-sO-0xx" secondAttribute="trailing" constant="133" id="7Ku-dF-wwP"/>
-                            <constraint firstItem="4Dj-sO-0xx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="134" id="9Iy-9Q-Mkk"/>
                             <constraint firstItem="lS0-Tc-0nH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OT8-MR-9QC"/>
                             <constraint firstItem="lS0-Tc-0nH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dCd-Za-PdK"/>
                             <constraint firstItem="1dw-rj-p5V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hDc-4O-pga"/>

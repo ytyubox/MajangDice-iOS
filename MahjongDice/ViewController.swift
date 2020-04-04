@@ -33,7 +33,6 @@ class ViewController: UIViewController {
 		allDiceView.forEach{
 			$0.setup()
 		}
-		self.hintGroupStackView.transform = CGAffineTransform(rotationAngle: .pi)
 		Publishers.Zip3(
 			_1_diceView.publish,
 			_2_diceView.publish,
@@ -74,6 +73,9 @@ extension ViewController {
 		hintLabel.text = diceResult.description
 		
 	}
+	private func rotateHalf() -> Void {
+		self.grapGroupStackView.transform = CGAffineTransform(rotationAngle: .pi)
+	}
 	private func rotatingStackView() {
 		self.grapGroupStackView.transform = .identity
 		let post = r.start
@@ -81,10 +83,20 @@ extension ViewController {
 		print(self.rotateAngle)
 		rotateAngle = (.pi / 2) * CGFloat(post.rawValue)
 		print(self.rotateAngle)
-		UIView.animate(withDuration: 2.0, delay: 0
-			, options: .curveEaseInOut,  animations: {
-				self.grapGroupStackView.transform = CGAffineTransform(rotationAngle: self.rotateAngle)
+		UIView.animate(withDuration: 0.4, delay: 0
+			, options: .curveEaseInOut,  animations: rotateHalf,
+				completion:
+			{ _ in
+				UIView.animate(withDuration: 0.4, delay: 0
+					, options: .init(),  animations: self.rotateHalf,completion:
+					{ _ in
+						UIView.animate(withDuration: 0.4, delay: 0
+							, options: .init(),  animations: {
+								self.grapGroupStackView.transform = CGAffineTransform(rotationAngle: self.rotateAngle)
+						})
+				})
 		})
+		
 	}
 }
 
